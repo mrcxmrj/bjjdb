@@ -5,13 +5,16 @@ import {
     Breadcrumb,
     BreadcrumbItem,
     BreadcrumbLink,
+    Center,
     Container,
     Heading,
 } from "@chakra-ui/react";
+import { Navbar } from "./Navbar";
 
 function App() {
     return (
-        <Container>
+        <Container maxW="container.lg">
+            <Navbar />
         </Container>
     );
 }
