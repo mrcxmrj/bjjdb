@@ -1,24 +1,78 @@
-import { List, ListItem } from "@chakra-ui/react";
-import React from "react";
+import { ChevronRightIcon } from "@chakra-ui/icons";
+import {
+    Box,
+    Collapse,
+    Flex,
+    HStack,
+    IconButton,
+    Link,
+    List,
+    ListItem,
+    Slide,
+    Spacer,
+    Text,
+    useDisclosure,
+} from "@chakra-ui/react";
+import React, { useState } from "react";
 
-type Props = {};
-
-export const MatchList = (props: Props) => {
+export const MatchList: React.FC = () => {
     return (
         <List spacing={3} marginTop="5">
             <ListItem>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit
+                <Fight />
             </ListItem>
+
             <ListItem>
-                Assumenda, quia temporibus eveniet a libero incidunt suscipit
+                <Fight />
             </ListItem>
+
             <ListItem>
-                Quidem, ipsam illum quis sed voluptatum quae eum fugit earum
+                <Fight />
             </ListItem>
-            {/* You can also use custom icons from react-icons */}
+
             <ListItem>
-                Quidem, ipsam illum quis sed voluptatum quae eum fugit earum
+                <Fight />
             </ListItem>
         </List>
+    );
+};
+
+interface FightProps {
+    fighter1: String;
+    fighter2: String;
+    link: String;
+}
+
+const Fight: React.FC = () => {
+    const { isOpen, onToggle } = useDisclosure();
+
+    return (
+        <Box
+            borderBottom="1px"
+            borderColor="gray.200"
+            borderRadius="base"
+            padding="1"
+            _hover={{
+                border: "1px",
+                borderColor: "gray.200",
+                cursor: "pointer",
+            }}
+            onClick={onToggle}
+        >
+            <HStack>
+                <Text>
+                    <Link>Fighter A</Link> vs <Link>Fighter B</Link>
+                </Text>
+                <IconButton
+                    icon={<ChevronRightIcon />}
+                    aria-label="Youtube link"
+                    colorScheme="red"
+                    size="xs"
+                ></IconButton>
+            </HStack>
+            <Collapse in={isOpen}>
+                <Box color="gray.500">wiecej statystyk, inne linki itd</Box>
+            </Collapse>
+        </Box>
     );
 };

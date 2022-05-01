@@ -10,12 +10,14 @@ import {
     Select,
 } from "@chakra-ui/react";
 import React from "react";
+import { MatchList } from "./MatchList";
 import { SearchBox } from "./SearchBox";
 
 export const MatchFinder: React.FC = () => {
     return (
         <Flex direction="column" gap="1" marginTop="1">
             <SearchBox />
+            <MatchList />
         </Flex>
     );
 };

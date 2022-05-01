@@ -28,13 +28,16 @@ export const Navbar: React.FC = () => {
             <HStack>
                 <Breadcrumb>
                     <BreadcrumbItem>
-                        <BreadcrumbLink href="#">asdf</BreadcrumbLink>
+                        <BreadcrumbLink href="#">matches</BreadcrumbLink>
                     </BreadcrumbItem>
                     <BreadcrumbItem>
-                        <BreadcrumbLink href="#">asdf</BreadcrumbLink>
+                        <BreadcrumbLink href="#">playlists</BreadcrumbLink>
                     </BreadcrumbItem>
                     <BreadcrumbItem>
-                        <BreadcrumbLink href="#">asdf</BreadcrumbLink>
+                        <BreadcrumbLink href="#">notes</BreadcrumbLink>
+                    </BreadcrumbItem>
+                    <BreadcrumbItem>
+                        <BreadcrumbLink href="#">profile</BreadcrumbLink>
                     </BreadcrumbItem>
                 </Breadcrumb>
                 <Button onClick={toggleColorMode}>
