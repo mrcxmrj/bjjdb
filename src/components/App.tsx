@@ -1,5 +1,4 @@
-import React, { FC } from "react";
-import logo from "./logo.svg";
+import React from "react";
 import "./App.css";
 import {
     Breadcrumb,
@@ -10,11 +9,13 @@ import {
     Heading,
 } from "@chakra-ui/react";
 import { Navbar } from "./Navbar";
+import { MatchFinder } from "./MatchFinder";
 
 function App() {
     return (
         <Container maxW="container.lg">
             <Navbar />
+            <MatchFinder />
         </Container>
     );
 }

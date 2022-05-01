@@ -9,11 +9,10 @@ import {
     useColorMode,
     useColorModeValue,
     Button,
-    Box,
 } from "@chakra-ui/react";
 import React from "react";
 
-export const Navbar = () => {
+export const Navbar: React.FC = () => {
     const { colorMode, toggleColorMode } = useColorMode();
     const bgColor = useColorModeValue("gray.100", "whiteAlpha.100");
 
